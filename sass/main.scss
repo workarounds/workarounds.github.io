@@ -1,0 +1,298 @@
+@import "partials/base";
+
+// generic add on style classes
+.section {
+  margin-top: rhythm(5);
+}
+
+.centre-text {
+  text-align: center;
+}
+
+.centre-element-both {
+  @include centre(both);
+}
+
+.centre-element-horizontal {
+  @include centre(x);
+}
+
+.centre-element-vertical {
+  @include centre(y);
+}
+
+.remove-margins {
+  margin: 0 0;
+}
+
+.remove-paddings {
+  padding: 0 0;
+}
+
+.white-text {
+  color: #ffffff;
+  a {
+    @include link-underline(#ffffff);
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.hide-not-xs {
+  @include breakpoint($breakpoint-xs) {
+    display: none;
+  }
+}
+
+// moderately generic
+a.no-underline {
+  background: none;
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    background: none;
+    text-decoration: none;
+  }
+}
+
+a.hover-underline {
+  &:hover {
+    @include link-underline($light-gray);
+  }
+}
+
+.white-text {
+  a.hover-underline {
+    &:hover {
+      @include link-underline(#fff);
+    }
+  }
+}
+
+.post-container {
+  width: 90%;
+  max-width: $post-container-width;
+  margin: 0 auto;
+}
+
+.wide-container {
+  width: 100%;
+  max-width: $wide-container-width;
+  margin: 0 auto;
+}
+
+.full-height-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+}
+
+
+
+hr.section-divider {
+  display: block;
+  width: 100px;
+  margin: rhythm(7) auto rhythm(7) auto;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+  @include breakpoint(max-width $breakpoint-xs) {
+    margin: rhythm(5) auto rhythm(5) auto;
+  }
+}
+
+.pad-bottom {
+  padding-bottom: rhythm(7);
+}
+
+.pad-top {
+  padding-bottom: rhythm(7);
+}
+
+.small-pad-bottom {
+  padding-bottom: rhythm(2);
+}
+
+.small-pad-top {
+  padding-bottom: rhythm(2);
+}
+
+.tiny-pad-bottom {
+  padding-bottom: rhythm(1);
+}
+
+.tiny-pad-top {
+  padding-bottom: rhythm(1);
+}
+
+
+// very specific main element classes
+.jumbo-banner-container {
+  @extend .full-height-container;
+  background: url(../images/office.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+.main-logo {
+  height: rhythm(10);
+}
+
+.about-page {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.page-header {
+  @extend .centre-text;
+  padding: rhythm(4) rhythm(2);
+  color: $darker-gray;
+  @include breakpoint(max-width $breakpoint-xs) {
+    padding: rhythm(2) rhythm(2);
+  }
+}
+
+.wide-centered-div {
+  @include centre(both);
+  width: 90%;
+  max-width: $post-container-width;
+}
+
+.work-card {
+  padding: rhythm(2);
+  @include breakpoint(max-width $breakpoint-xs) {
+    border-bottom: 1px solid $lighter-gray;
+  }
+  &.first-card {
+    @include breakpoint($breakpoint-xs) {
+      border-right: 1px solid $lighter-gray;
+    }
+  }
+  &.big-card {
+    @include breakpoint($breakpoint-xs) {
+      padding: rhythm(4);
+      border-top: 1px solid $lighter-gray;
+      border-bottom: 1px solid $lighter-gray;
+    }
+    p {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $post-container-width;
+      margin-bottom: 0;
+    }
+  }
+
+  h5 {
+    @include adjust-font-size-to($h4-small-size);
+  }
+
+  @include transition-property(all);
+  @include transition-duration(0.2s);
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.5);
+    h5 b {
+      @include link-underline($light-gray);
+    }
+  }
+}
+
+.work-page {
+
+}
+
+.work-card-header {
+  padding: rhythm(2);
+}
+
+.work-card-description {
+  padding: rhythm(4);
+}
+
+.work-card-image {
+  display: block;
+  width: 80%;
+  max-width: $post-container-width/2;
+  margin: 0 auto;
+}
+
+.big-card .work-card-image {
+  display: block;
+  width: 100%;
+  max-width: $post-container-width;
+  margin: 0 auto;
+}
+
+.contact-card {
+  h4 {
+    margin-top: rhythm(2);
+  }
+}
+
+.team-page {
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: rhythm(4) 0;
+}
+
+.team-card {
+  @extend .centre-text;
+
+  padding: rhythm(4) 0;
+
+  @include breakpoint($breakpoint-xs $breakpoint-xx) {
+    &.top-row-card {
+      border-bottom: 1px solid $lighter-gray;
+    }
+  }
+  &.not-last-card {
+    @include breakpoint($breakpoint-xs) {
+      border-right: 1px solid $lighter-gray;
+    }
+
+    @include breakpoint(max-width $breakpoint-xs) {
+      border-bottom: 1px solid $lighter-gray;
+    }
+  }
+  &.last {
+    margin-left: -10px;
+  }
+  &.last-2 {
+    margin-left: -10px;
+  }
+}
+
+.team-card-container {
+}
+
+.team-member-pic {
+  display: block;
+  width: 30%;
+  padding-bottom: rhythm(2);
+  margin: 0 auto;
+  @include border-radius(50% 50%);
+}
+
+.team-social-icons {
+  img {
+    height: rhythm(3);
+    width: rhythm(3);
+    padding: rhythm(1);
+    @include opacity(0.5);
+    @include transition-property(opacity);
+    @include transition-duration(0.3s);
+
+    &:hover, &:active, &:focus {
+      @include opacity(0.75);
+    }
+  }
+}
+
+.home-link {
+  padding: rhythm(2);
+}
+
+.footer {
+  padding: rhythm(3);
+}
+
+

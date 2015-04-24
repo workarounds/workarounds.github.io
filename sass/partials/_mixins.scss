@@ -1,0 +1,40 @@
+@import "compass";
+@import "variables";
+
+// mixin for centering (parent should be relative)
+@mixin centre($axis: "both"){
+  position:absolute;
+  @if $axis == "y"{
+    top:50%;
+    @include translateY(-50%);
+  }
+  @if $axis == "x"{
+    left:50%;
+    @include translateY(-50%);
+  }
+  @if $axis == "both"{
+    top:50%;
+    left:50%;
+    @include translate(-50%, -50%);
+  }
+}
+
+@mixin widen-and-center($widen-by) {
+  top:50%;
+  left:50%;
+  margin-left: -$widen-by/2;
+  margin-right: -$widen-by/2;
+  @include translate(-50%-$widen-by, -50%);
+}
+
+// sets link color and underline
+@mixin link-underline($color) {
+  text-decoration: none;
+
+  color: $color;
+  $underline-color: lighten($color, 20%);
+  @include background-image(linear-gradient($underline-color, $underline-color));
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 0% 93%;
+}
