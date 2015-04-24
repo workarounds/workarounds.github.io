@@ -267,8 +267,7 @@ hr.section-divider {
 .team-member-pic {
   display: block;
   width: 30%;
-  padding-bottom: rhythm(2);
-  margin: 0 auto;
+  margin: 0 auto rhythm(2) auto;
   @include border-radius(50% 50%);
 }
 
