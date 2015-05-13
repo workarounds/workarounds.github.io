@@ -26,6 +26,7 @@ body {
     }
   }
 }
+
 .grid-2-3 {
   position: relative;
   @include breakpoint($breakpoint-xs) {
@@ -47,17 +48,17 @@ body {
       margin-right: 0;
     }
   }
-//  @include breakpoint($breakpoint-xs $breakpoint-xx) {
-//    @include span(6);
-//    &.last {
-//      @include omega;
-//      margin-right: 0;
-//    }
-//    &.last-2 {
-//      @include omega;
-//      margin-right: 0;
-//    }
-//  }
+  //  @include breakpoint($breakpoint-xs $breakpoint-xx) {
+  //    @include span(6);
+  //    &.last {
+  //      @include omega;
+  //      margin-right: 0;
+  //    }
+  //    &.last-2 {
+  //      @include omega;
+  //      margin-right: 0;
+  //    }
+  //  }
 }
 
 .grid-1-4-alt {
@@ -93,3 +94,17 @@ body {
     }
   }
 }
+
+// 5
+.grid-1-5 {
+  @include layout(10);
+  position: relative;
+  @include breakpoint($breakpoint-xs) {
+    @include span(2);
+    &.last {
+      @include omega;
+      margin-right: 0;
+    }
+  }
+}
+
