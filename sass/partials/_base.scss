@@ -139,3 +139,13 @@ b {
 img {
   max-width: 100%;
 }
+
+code {
+  @include rhythm(0, 0, 0, 3, $base-font-size);
+  @include adjust-font-size-to($base-font-size, $leading);
+  display: block;
+  width: 100%;
+  padding: rhythm(2);
+  background-color: $lighter-gray;
+  font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+}
