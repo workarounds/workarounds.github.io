@@ -146,6 +146,7 @@ code {
   display: block;
   width: 100%;
   padding: rhythm(2);
-  background-color: $lighter-gray;
+  background-color: $lightest-gray;
   font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+  color: $black;
 }
