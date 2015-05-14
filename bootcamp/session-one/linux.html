@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Workarounds | Careers</title>
+    <meta name="description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while."/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@workarounds_in">
+    <meta name="twitter:title" content="Workarounds | Careers">
+    <meta name="twitter:description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while.">
+    <meta name="twitter:creator" content="@workarounds_in">
+    <meta name="twitter:image" content="http://workarounds.in/images/oghiringimage.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Workarounds | Careers"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://workarounds.in/careers/"/>
+    <meta property="og:image" content="http://workarounds.in/images/oghiringimage.jpg"/>
+    <meta property="og:description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while."/>
+    <meta property="og:site_name" content="Workarounds"/>
+    <meta property="fb:admins" content="100007193532033"/>
+
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../stylesheets/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="footer centre-text">
+    <h5>
+        <a href="../../"
+           class="no-underline hover-underline">Home</a>
+        &nbsp; | &nbsp;
+        <a href="../../contact/" class="no-underline hover-underline">Contact</a>
+        &nbsp; | &nbsp;
+        <a href="../../summer/" class="no-underline hover-underline">Summer</a>
+    </h5>
+</div>
+
+<div class="post-container pad-bottom">
+    <h2 class="centre-text">Getting Started</h2>
+    <h4 class="centre-text">Linux Android Setup</h4>
+
+    <div class="separator-divider">
+        <hr class="section-divider">
+    </div>
+
+    <p> Java is the programming language mainly used to develop android applicaitons. As a result, the Java Development Kit (JDK) is the first component that must be installed.</p>
+
+    <div class="section">
+        <h3>Linux JDK Installation</h3>
+        <p>
+            Firstly, if the chosen development system is running the 64-bit version of Ubuntu then it is essential that the 32-bit library support package be installed: 
+        </p>
+        <code>sudo apt-get install ia32-libs</code>
+        <p>
+            JDK for linux can be found <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here </a>
+            It is available as a tar archive for most linux distributions. To install the tar archive follow these steps : <br/>
+            1. Create the directory into which the JDK is to be installed (for the purposes of this example we will assume /home/demo/java). <br/>
+            2. Download the appropriate tar.gz package from the Oracle web site into the directory. <br/>
+            3. Execute the following command (where <jdk-file> is replaced by the name of the downloaded JDK file):
+            <code>tar xvfz  {jdk-file}.tar.gz</code>
+            4. Remove the downloaded tar.gz file. 5. Add the path to the bin directory of the JDK installation to your $PATH variable. For example, assuming that the JDK ultimately installed into /home/demo/java/jdk1.7.0_45 the following would need to be added to your $PATH environment variable: 
+            <code>/home/demo/java/jdk1.7.0_45/bin</code>
+            This can typically be achieved by adding a command to the .bashrc file in your home directory (specifics may differ depending on the particular Linux distribution in use). For example, change directory to your home directory, edit the .bashrc file contained therein and add the following line at the end of the file (modifying the path to match the location of the JDK on your system): 
+            <code>export PATH=/home/demo/java/jdk1.7.0_45/bin:$PATH</code>
+            Having saved the change, future terminal sessions will include the JDK in the $PATH environment variable. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Download the Android Studio Package</h3>
+        <p>
+            Most of the work involved in developing applications for Android will be performed using the Android Studio environment. Android Studio may be downloaded from <a href="http://developer.android.com/sdk/index.html" target="_blank">here </a> <br/>From this page, either click on the download button if it lists the correct platform (for example on a Windows based web browser the button will read “Download Android Studio for Windows”), or select the “Other Download Options” link to manually select the appropriate package for your platform and operating system. On the subsequent screen, accept the terms and conditions to initiate the download. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Installing Android Studio</h3>
+        <p>
+            Having downloaded the Linux Android Studio package, open a terminal window, change directory to the location where Android Studio is to be installed and execute the following command: 
+            <code>unzip /{path to package}/android-studio-ide-{version}-linux.zip</code>
+            Note that the Android Studio bundle will be installed into a sub-directory named android-studio. Assuming, therefore, that the above command was executed in /home/demo, the software packages will be unpacked into /home/demo/android-studio.<br/>
+        </p>
+        <p>
+            To launch Android Studio, open a terminal window, change directory to the android-studio/bin sub-directory and execute the following command: 
+        </p>
+        <code>./studio.sh</code>
+    </div>
+
+    <div class="section">
+        <h3>Android Studio Setup Wizard</h3>
+        <p>
+            The first time that Android Studio is launched after being installed, a dialog will appear providing the option to import settings from a previous Android Studio version. If you have settings from a previous version and would like to import them into the latest installation, select the appropriate option and location. Alternatively, indicate that you do not need to import any previous settings and click on the OK button to proceed. <br/> <p>
+            After Android Studio has finished loading, the setup wizard will appear as shown below</p> 
+        </p>
+        <img src="../../images/Android_studio_setup_wizard.png"/>
+        <p>
+            Click on the Next button, choose the Standard installation option and click on Next once again. On the license agreement screen, select and accept each of the licenses listed before clicking on Finish to complete the setup process. The Welcome to Android Studio screen should then appear: 
+        </p>
+        <img src="../../images/Welcome_to_android_studio.png"/>
+    </div>
+
+    <div class="section">
+        <h3>Installing the Latest Android SDK Packages</h3>
+        <p>
+            The steps performed so far have installed Java, the Android Studio IDE and the current set of default Android SDK packages. Before proceeding, it is worth taking some time to verify which packages are installed and to install any missing packages. <br/>
+        </p>
+        <p>
+            This task can be performed using the Android SDK Manager, which may be launched from within the Android Studio tool by selecting the Configure -> SDK Manager option from within the Android Studio welcome dialog. Once invoked, the SDK Manager tool will appear as 
+        </p>
+        <img src="../../images/Android_studio_sdk_manager.png"/>
+        <p>
+            Within the Android SDK Manager, make sure that the check boxes next to the following packages are listed as Installed in the Status column: <br/>
+
+            Tools > Android SDK Tools<br/>
+            Tools > Android SDK Platform-tools<br/>
+            Tools > Android SDK Build-tools<br/>
+            SDK Platform (most recent version)> SDK Platform<br/>
+            SDK Platform (most recent version) > ARM EABI v7a System Image<br/>
+            Extras -> Android Support Repository<br/>
+            Extras > Android Support Library<br/>
+            Extras -> Google Repository<br/>
+            Extras -> Google USB Driver (Required on Windows systems only)<br/>
+            Extras > Intel x86 Emulator Accelerator (HAXM installer) <br/>
+        </p>
+        <p>
+            In the event that any of the above packages are listed as Not Installed, simply select the checkboxes next to those packages and click on the Install packages button to initiate the installation process. In the resulting dialog, accept the license agreements before clicking on the Install button. The SDK Manager will then begin to download and install the designated packages. As the installation proceeds, a progress bar will appear at the bottom of the manager window indicating the status of the installation.<br/>
+        </p>
+        <p>
+            Once the installation is complete, review the package list and make sure that the selected packages are now listed as Installed in the Status column. If any are listed as Not installed, make sure they are selected and click on the Install packages… button again. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Android Studio Setup Wizard</h3>
+        <p>
+            The first time that Android Studio is launched after being installed, a dialog will appear providing the option to import settings from a previous Android Studio version. If you have settings from a previous version and would like to import them into the latest installation, select the appropriate option and location. Alternatively, indicate that you do not need to import any previous settings and click on the OK button to proceed. <br/> <p>
+            After Android Studio has finished loading, the setup wizard will appear as shown below</p> 
+        </p>
+        <img src="../../images/Android_studio_setup_wizard.png"/>
+        <p>
+            Click on the Next button, choose the Standard installation option and click on Next once again. On the license agreement screen, select and accept each of the licenses listed before clicking on Finish to complete the setup process. The Welcome to Android Studio screen should then appear: 
+        </p>
+        <img src="../../images/Welcome_to_android_studio.png"/>
+    </div>
+
+    <div class="section">
+        <h3>Making the Android SDK Tools Command-Line Accessible</h3>
+        <p>
+            On Linux this will involve once again editing the .bashrc file. Assuming that the Android Studio bundle package was installed into /home/demo/Android/sdk, the export line in the .bashrc file would now read as follows: 
+        </p>
+        <code>export PATH=/home/demo/java/jdk1.7.0_10/bin:/home/demo/Android/sdk/platform-tools:/home/demo/Android/sdk/tools:/home/demo/android-studio/bin:$PATH</code>
+        <p>
+            Note also that the above command adds the android-studio/bin directory to PATH variable. This will enable the studio.sh script to be executed regardless of the current directory within a terminal window.
+        </p>
+    </div>
+
+</div>
+
+<div class="footer centre-text">
+    <h5>
+        <a href="../../"
+           class="no-underline hover-underline">Home</a>
+        &nbsp; | &nbsp;
+        <a href="../../contact/" class="no-underline hover-underline">Contact</a>
+        &nbsp; | &nbsp;
+        <a href="../../summer/" class="no-underline hover-underline">Summer</a>
+    </h5>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Workarounds | Careers</title>
+    <meta name="description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while."/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@workarounds_in">
+    <meta name="twitter:title" content="Workarounds | Careers">
+    <meta name="twitter:description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while.">
+    <meta name="twitter:creator" content="@workarounds_in">
+    <meta name="twitter:image" content="http://workarounds.in/images/oghiringimage.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Workarounds | Careers"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://workarounds.in/careers/"/>
+    <meta property="og:image" content="http://workarounds.in/images/oghiringimage.jpg"/>
+    <meta property="og:description"
+          content="We are looking for interns: designers and developers. Have a look at our agenda for this summer. If you like it, come join us, it'll be worth your while."/>
+    <meta property="og:site_name" content="Workarounds"/>
+    <meta property="fb:admins" content="100007193532033"/>
+
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../stylesheets/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="footer centre-text">
+    <h5>
+        <a href="../../"
+           class="no-underline hover-underline">Home</a>
+        &nbsp; | &nbsp;
+        <a href="../../contact/" class="no-underline hover-underline">Contact</a>
+        &nbsp; | &nbsp;
+        <a href="../../summer/" class="no-underline hover-underline">Summer</a>
+    </h5>
+</div>
+
+<div class="post-container pad-bottom">
+    <h2 class="centre-text">Getting Started</h2>
+    <h4 class="centre-text">Windows Android Setup</h4>
+
+    <div class="separator-divider">
+        <hr class="section-divider">
+    </div>
+
+    <p> Java is the programming language mainly used to develop android applicaitons. As a result, the Java Development Kit (JDK) is the first component that must be installed.</p>
+
+    <div class="section">
+        <h3>Windows JDK Installation</h3>
+        <p>
+            For Windows systems, the JDK may be obtained from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Oracle Corporation’s website.</a> <br/>Assuming that a suitable JDK is not already installed on your system, download the latest JDK package that matches the destination computer system. Once downloaded, launch the installation executable and follow the on screen instructions to complete the installation process.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Download the Android Studio Package</h3>
+        <p>
+            Most of the work involved in developing applications for Android will be performed using the Android Studio environment. Android Studio may be downloaded from <a href="http://developer.android.com/sdk/index.html" target="_blank">here </a> <br/>From this page, either click on the download button if it lists the correct platform (for example on a Windows based web browser the button will read “Download Android Studio for Windows”), or select the “Other Download Options” link to manually select the appropriate package for your platform and operating system. On the subsequent screen, accept the terms and conditions to initiate the download. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Installing Android Studio</h3>
+        <p>
+            Locate the downloaded android studio installation file and double click on it to start the installation process. Follow the on screen instructions to install android studio acoording to your requirements.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Android Studio Setup Wizard</h3>
+        <p>
+            The first time that Android Studio is launched after being installed, a dialog will appear providing the option to import settings from a previous Android Studio version. If you have settings from a previous version and would like to import them into the latest installation, select the appropriate option and location. Alternatively, indicate that you do not need to import any previous settings and click on the OK button to proceed. <br/> <p>
+            After Android Studio has finished loading, the setup wizard will appear as shown below</p> 
+        </p>
+        <img src="../../images/Android_studio_setup_wizard.png"/>
+        <p>
+            Click on the Next button, choose the Standard installation option and click on Next once again. On the license agreement screen, select and accept each of the licenses listed before clicking on Finish to complete the setup process. The Welcome to Android Studio screen should then appear: 
+        </p>
+        <img src="../../images/Welcome_to_android_studio.png"/>
+    </div>
+
+    <div class="section">
+        <h3>Installing the Latest Android SDK Packages</h3>
+        <p>
+            The steps performed so far have installed Java, the Android Studio IDE and the current set of default Android SDK packages. Before proceeding, it is worth taking some time to verify which packages are installed and to install any missing packages. <br/>
+        </p>
+        <p>
+            This task can be performed using the Android SDK Manager, which may be launched from within the Android Studio tool by selecting the Configure -> SDK Manager option from within the Android Studio welcome dialog. Once invoked, the SDK Manager tool will appear as 
+        </p>
+        <img src="../../images/Android_studio_sdk_manager.png"/>
+        <p>
+            Within the Android SDK Manager, make sure that the check boxes next to the following packages are listed as Installed in the Status column: <br/>
+
+            Tools > Android SDK Tools<br/>
+            Tools > Android SDK Platform-tools<br/>
+            Tools > Android SDK Build-tools<br/>
+            SDK Platform (most recent version)> SDK Platform<br/>
+            SDK Platform (most recent version) > ARM EABI v7a System Image<br/>
+            Extras -> Android Support Repository<br/>
+            Extras > Android Support Library<br/>
+            Extras -> Google Repository<br/>
+            Extras -> Google USB Driver (Required on Windows systems only)<br/>
+            Extras > Intel x86 Emulator Accelerator (HAXM installer) <br/>
+        </p>
+        <p>
+            In the event that any of the above packages are listed as Not Installed, simply select the checkboxes next to those packages and click on the Install packages button to initiate the installation process. In the resulting dialog, accept the license agreements before clicking on the Install button. The SDK Manager will then begin to download and install the designated packages. As the installation proceeds, a progress bar will appear at the bottom of the manager window indicating the status of the installation.<br/>
+        </p>
+        <p>
+            Once the installation is complete, review the package list and make sure that the selected packages are now listed as Installed in the Status column. If any are listed as Not installed, make sure they are selected and click on the Install packages… button again. 
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Android Studio Setup Wizard</h3>
+        <p>
+            The first time that Android Studio is launched after being installed, a dialog will appear providing the option to import settings from a previous Android Studio version. If you have settings from a previous version and would like to import them into the latest installation, select the appropriate option and location. Alternatively, indicate that you do not need to import any previous settings and click on the OK button to proceed. <br/> <p>
+            After Android Studio has finished loading, the setup wizard will appear as shown below</p> 
+        </p>
+        <img src="../../images/Android_studio_setup_wizard.png"/>
+        <p>
+            Click on the Next button, choose the Standard installation option and click on Next once again. On the license agreement screen, select and accept each of the licenses listed before clicking on Finish to complete the setup process. The Welcome to Android Studio screen should then appear: 
+        </p>
+        <img src="../../images/Welcome_to_android_studio.png"/>
+    </div>
+
+    <div class="section">
+        <h3>Making the Android SDK Tools Command-Line Accessible</h3>
+        <p>
+            Most of the time, the underlying tools of the Android SDK will be accessed from within the Android Studio environment. That being said, however, there will also be instances where it will be useful to be able to invoke those tools from a command prompt or terminal window. In order for the operating system on which you are developing to be able to find these tools, it will be necessary to add them to the system’s PATH environment variable.<br/>
+        </p>
+        <p>
+            Regardless of operating system, the PATH variable needs to be configured to include the following paths (where <path_to_android_sdk_installation> represents the file system location into which the SDK was installed):  
+        </p>
+        <code>
+            {path_to_android_sdk_installation}/sdk/tools
+            {path_to_android_sdk_installation}/sdk/platform-tools
+        </code>
+        <p>
+            The location of the SDK on your system can be identified by launching the SDK Manager and referring to the SDK Path: field located at the top of the manager window as highlighted below
+        </p>
+        <img src="../../images/Android_sdk_path.png"/>
+    </div>
+
+</div>
+
+<div class="footer centre-text">
+    <h5>
+        <a href="../../"
+           class="no-underline hover-underline">Home</a>
+        &nbsp; | &nbsp;
+        <a href="../../contact/" class="no-underline hover-underline">Contact</a>
+        &nbsp; | &nbsp;
+        <a href="../../summer/" class="no-underline hover-underline">Summer</a>
+    </h5>
+</div>
+
+</body>
+</html>
