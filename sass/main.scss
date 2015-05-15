@@ -58,7 +58,13 @@ a.no-underline {
 
 a.hover-underline {
   &:hover {
-    @include link-underline($light-gray);
+    @include link-underline($weather-gray);
+  }
+}
+
+a.hover-darken {
+  &:hover {
+    background-color: $lighter-gray;
   }
 }
 
@@ -79,6 +85,12 @@ a.hover-underline {
 .wide-container {
   width: 100%;
   max-width: $wide-container-width;
+  margin: 0 auto;
+}
+
+.img-post-container {
+  width: 100%;
+  max-width: $post-container-width;
   margin: 0 auto;
 }
 
@@ -156,6 +168,20 @@ hr.section-divider {
   @include centre(both);
   width: 90%;
   max-width: $post-container-width;
+}
+
+.img-link-card {
+  padding-top: rhythm(2);
+  padding-bottom: rhythm(2);
+  &:hover {
+    background-color: $lightest-gray;
+    .link-it {
+      @include link-underline($weather-gray);
+    }
+  }
+  img {
+    width: 60%;
+  }
 }
 
 .work-card {

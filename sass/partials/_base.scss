@@ -118,7 +118,7 @@ h6 {
   }
 }
 
-p, li {
+p, li, tr {
   @include rhythm(0, 0, 0, 3, $base-font-size);
   @include adjust-font-size-to($base-font-size, $leading);
   color: $weather-gray;
@@ -149,4 +149,20 @@ code {
   background-color: $lightest-gray;
   font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
   color: $black;
+}
+
+thead {
+  th {
+    font-weight: bold;
+  }
+}
+
+th {
+  padding-left: rhythm(1);
+  padding-right: rhythm(1);
+  vertical-align: top;
+}
+
+tr {
+  vertical-align: top;
 }
