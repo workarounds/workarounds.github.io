@@ -144,11 +144,11 @@ code {
   @include rhythm(0, 0, 0, 3, $base-font-size);
   @include adjust-font-size-to($base-font-size, $leading);
   display: block;
-  width: 100%;
   padding: rhythm(2);
   background-color: $lightest-gray;
   font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
   color: $black;
+  overflow: scroll;
 }
 
 thead {
